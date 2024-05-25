@@ -55,12 +55,20 @@ body {
 .header__logo-mobile a,
 .footer__logo a {
     font-family: var(--secondary-font);
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-decoration: none;
 }
+@media screen and (min-width: 1158px) {
+    .header__logo a,
+    .header__logo-mobile a,
+    .footer__logo a {
+        font-size: 26px;
+    }
+}
+    
 
 .header__logo a,
 .header__logo-mobile a {
@@ -84,12 +92,30 @@ body {
     color: var(--black);
     position: relative;
 }
-
-.header__info {
+/* ## NU functioneaza media querry daca stilizez intai pt mobile, tableta si apoi adaug cu media stilutile pentru descktop */
+/* .header__info {
     display: flex;
-    /* width: 333px; */
-    gap:40px;
-    justify-content: space-between;
+    flex-direction: column;
+    gap:10px;
+    margin-right: 10px;
+} */
+
+/* @media screen and (min-width: 1158px) { */
+    .header__info {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+        }
+/* }  */
+
+
+@media screen and (max-width: 1157px) {
+    .header__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 10px;
+    }
 }
 
 .header__navigation a,
@@ -102,6 +128,12 @@ body {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 1157px) {
+    .header__info a {
+        font-size: 12px;
+    }
 }
 
 .header__navigation a:hover,
@@ -189,10 +221,23 @@ body {
 
 .hero-section__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    /* font-size: 44px;
+    line-height: 1.4; */
     letter-spacing: 0.06em;
+    font-size: 26px;
+    line-height: 1.6;
 }
+
+@media screen  and (min-width: 1158px) {
+    .hero-section__title {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.4;
+        letter-spacing: 0.06em;
+        }
+}
+
+
 
 .hero-section__service {
     font-weight: 700;
@@ -229,22 +274,40 @@ body {
 }
 
 .we-do-section__benefits {
-    width: 270px;
-    height: 120px;
     background-color: var(--gray-background);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    max-width: 450px;
+    width: 100%;
+    height: 120px;
+    border-radius: 4px 0px 0px 0px;
+    opacity: 0px;
 
 }
+
+@media screen and (min-width: 768px) {
+    .we-do-section__benefits {
+        width: 354px;
+        height: 120px;
+        
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .we-do-section__benefits {
+        width: 270px;
+        height: 120px;
+       
+    }
+}
+
 
 .we-do-section__icon {
     width: 70px;
     height: 70px;
-    /* width: 270px;
-    height: 120px;
-    padding: 100px 25px; */
+   
 }
 
 .we-do-section__list h5 {
@@ -256,10 +319,25 @@ body {
 }
 
 .we-do-section__list p {
+    max-width: 450px;
+    width: 100%;
     font-size: 14px;
     line-height: 1.7;
     color: var(--gray);
     letter-spacing: 0.03em;
+    text-wrap: wrap;
+    /* margin-bottom: 30px; */
+}
+@media screen and (min-width: 768px) {
+    .we-do-section__list p {
+            max-width: 354px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .we-do-section__list p {
+        max-width: 270px;
+    }
 }
 
 .we-do-section__title {
@@ -351,8 +429,8 @@ body {
 }
 
 .team-section__card {
-    width: 270px;
-    height: 428px;
+    width: 450px;
+    height: 622px;
     background: var(--white);
     border-radius: 0px 0px 4px 4px;
     box-shadow:
@@ -360,6 +438,20 @@ body {
         0px 1px 1px 0px #00000024,
         0px 1px 3px 0px #0000001F;
 
+}
+
+@media screen and (min-width: 768px) {
+    .team-section__card {
+        width: 354px;
+        height: 536px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .team-section__card {
+        width: 270px;
+        height: 428px;
+    }
 }
 
 .team-section__card__nume {
@@ -381,8 +473,9 @@ body {
 .team-section__card__social {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 16px 32px 30px;
+    gap:10px;
 
 }
 
@@ -423,13 +516,19 @@ body {
 }
 
 .customer__title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.03em;
     margin-bottom: 50px;
 }
 
+@media screen and (min-width: 1158px) {
+    .customer__title {
+        font-size: 36px;
+        }
+    
+}
 .customer_sigle.container {
     max-width: 1170px;
 
@@ -444,7 +543,7 @@ body {
 }
 
 .customer__sigla {
-    width: 170px;
+    max-width: 210px;
     height: 92px;
     display: flex;
     justify-content: center;
@@ -455,6 +554,18 @@ body {
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .customer__sigla {
+        max-width: 226px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .customer__sigla {
+        max-width: 170px;
+    }
 }
 
 .customer_icon {
@@ -569,8 +680,8 @@ body {
     background-color: var(--blue);
 }
 
+
 .footer_formular {
-    max-width: 570px;
     margin-top: 72px;
     margin-bottom: 93px;
     display: flex;
@@ -587,14 +698,13 @@ body {
 }
 
 .footer_email {
-    width: 358px;
+    width: 400px;
     height: 50px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: 0.03em;
     text-align: left;
-    /* margin-top: 20px; */
     padding-left: 16px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -602,6 +712,18 @@ body {
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 427px) {
+    .footer_email {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer_email {
+        width: 358px;
+    }
 }
 
 .footer_btn {
@@ -961,7 +1083,7 @@ body {
 
 /* Fila Studio RESPONSIVE  desktop - mobile & tableta */
 
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1157px) {
     .we-do-section__title,
     .we-do-section_images.container {
         display: none;
@@ -970,6 +1092,7 @@ body {
    .we-do-section__list.container,
    .customer_sigle.container {
        justify-content: center;
+       align-items: center;
    }
 
    .we-do-section__list.container {
@@ -1063,9 +1186,9 @@ body {
     top: 0;
 }
 
+/* Media query for mobile  */
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .js-open-menu {
         display: block;
     }
@@ -1110,7 +1233,6 @@ body {
     .header__info {
         margin-top: 306px;
         margin-left: 40px;
-        /* text-align: center; */
         display: flex;
         flex-direction: column;
         gap: 32px;
