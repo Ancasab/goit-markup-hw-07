@@ -776,12 +776,18 @@ body {
 }
 
 .portofoliu__navigare__lista.container {
-    width: 1170px;
-    justify-content: center;
+    max-width: 1170px;
+    flex-wrap: wrap;
     gap: 8px;
     list-style: none;
     margin-bottom: 50px;
 
+}
+
+@media screen and (min-width: 1158px) {
+    .portofoliu__navigare__lista.container {
+        justify-content: center;
+    }
 }
 
 /* butoanele de navigare*/
@@ -813,11 +819,28 @@ body {
 /* exemple din portofoliu*/
 
 .portofoliu__exemple.container {
-    width: 1170px;
+    max-width: 1170px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin: auto;
+}
+.portofoliu__exemplu {
+    width: 450px;
+    height: 404px;
+}
+@media screen and (min-width: 768px) {
+    .portofoliu__exemplu {
+        width: 354px;
+        height: 440px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .portofoliu__exemplu {
+        width: 370px;
+        height: 404px;
+    }
 }
 
 .portofoliu__exemplu__nume {
@@ -1290,7 +1313,8 @@ body {
 
     }
 
-    .header__info__social a:hover {
+    .header__info__social a:hover,
+    .header__info__social a:focus {
         color: var(--blue);
     }
 
