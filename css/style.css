@@ -827,19 +827,19 @@ body {
     margin: auto;
 }
 .portofoliu__exemplu {
-    width: 450px;
+    max-width: 450px;
     height: 404px;
 }
 @media screen and (min-width: 768px) {
     .portofoliu__exemplu {
-        width: 354px;
-        height: 440px;
+        max-width: 354px;
+        /* height: 440px; */
     }
 }
 
 @media screen and (min-width: 1158px) {
     .portofoliu__exemplu {
-        width: 370px;
+        max-width: 370px;
         height: 404px;
     }
 }
