@@ -1296,13 +1296,14 @@ body {
     .header__info a {
         font-size: 20px;
         color: var(--black);
+        
     }
 
     .header__info__social {
         display: flex;
         margin-top: 64px;
         gap: 20px;
-       
+        
         
     }
 
@@ -1313,8 +1314,17 @@ body {
         letter-spacing: 0.02em;
         text-align: left;
         cursor: pointer;
-
+        
     }
+
+        /* a:not(:last-child)::after */
+        .header__info__social a::after {
+            content: '';
+            border: rgba(33, 33, 33, 0.2) 1px solid;
+            width: 22px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
 
     .header__info__social a:hover,
     .header__info__social a:focus {
